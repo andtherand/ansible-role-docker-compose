@@ -3,7 +3,7 @@ galaxy_info:
   author: Andy Ruck
   description:  >
     "Creates a docker-compose file to be able to docker-compose up, rm and so on."
-  company: "mychiara | svs"
+  company: mychiara
   license: license (GPLv2)
   min_ansible_version: 1.2
 
