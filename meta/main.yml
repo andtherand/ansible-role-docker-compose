@@ -1,18 +1,17 @@
 ---
-
+dependencies: []
 galaxy_info:
-    author: Andy Ruck
-    description:  >
-      "Creates a docker-compose file to be able to docker-compose up, rm and so on."
-    company: mychiara
-    license: license (GPLv2)
-    min_ansible_version: 1.2
-    platforms:
-        - name: Ubuntu
-        versions:
-        - trusty
-    categories:
+  author: "Andy Ruck"
+  categories:
     - clustering
     - development
     - networking
-dependencies: []
+  company: mychiara
+  description: >
+    Creates a docker-compose file to be able to docker-compose up, rm and so on.
+  license: "license (GPLv2)"
+  min_ansible_version: 1.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
