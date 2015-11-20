@@ -1,29 +1,18 @@
 ---
-galaxy_info:
-  author: Andy Ruck
-  description:  >
-    "Creates a docker-compose file to be able to docker-compose up, rm and so on."
-  company: mychiara
-  license: license (GPLv2)
-  min_ansible_version: 1.2
 
-  platforms:
-  - name: Ubuntu
-   versions:
-   - trusty
-  categories:
-  #- cloud
-  #- cloud:ec2
-  #- cloud:gce
-  #- cloud:rax
-  - clustering
-  #- database
-  #- database:nosql
-  #- database:sql
-  - development
-  #- monitoring
-  - networking
-  #- packaging
-  #- system
-  #- web
+galaxy_info:
+    author: Andy Ruck
+    description:  >
+      "Creates a docker-compose file to be able to docker-compose up, rm and so on."
+    company: mychiara
+    license: license (GPLv2)
+    min_ansible_version: 1.2
+    platforms:
+    - name: Ubuntu
+    versions:
+    - trusty
+    categories:
+    - clustering
+    - development
+    - networking
 dependencies: []
