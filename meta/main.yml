@@ -8,9 +8,9 @@ galaxy_info:
     license: license (GPLv2)
     min_ansible_version: 1.2
     platforms:
-    - name: Ubuntu
-    versions:
-    - trusty
+        - name: Ubuntu
+        versions:
+        - trusty
     categories:
     - clustering
     - development
