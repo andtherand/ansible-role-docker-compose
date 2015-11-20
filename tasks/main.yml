@@ -1,0 +1,4 @@
+---
+- include: compose.yml
+- include: stop_rm.yml
+- include: run.yml

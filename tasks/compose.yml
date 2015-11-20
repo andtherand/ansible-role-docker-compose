@@ -1,0 +1,17 @@
+---
+- name: "docker-compose > template src"
+  debug: >
+    msg="{{ docker_compose_src_template }}"
+  tags:
+    - docker-compose
+    - docker-compose-template
+    - debug
+
+- name: "docker-compose > compose template"
+  template: >
+    src={{ docker_compose_src_template }}
+    dest={{ docker_compose_dest }}/{{ docker_compose_file }}
+  register: _docker_compose_template_state
+  tags:
+    - docker-compose
+    - docker-compose-template
