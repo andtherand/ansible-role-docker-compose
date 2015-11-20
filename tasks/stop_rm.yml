@@ -1,0 +1,31 @@
+---
+- name: "docker-compose > _docker_compose_template_state.changed? docker_compose_rebuild_images?"
+  debug: >
+    msg="_docker_compose_template_state: {{ _docker_compose_template_state.changed }},
+      docker_compose_rebuild_images: {{ docker_compose_rebuild_images }}"
+  tags:
+    - debug
+    - docker-compose
+    - docker-compose-stop
+    - docker-compose-rm
+    - docker-compose-rebuild-images
+
+- name: "docker-compose > stop"
+  command: "docker-compose -f {{ docker_compose_file }} stop"
+  args:
+    chdir: "{{ docker_compose_dest }}"
+  when: _docker_compose_template_state.changed or docker_compose_rebuild_images
+  tags:
+    - docker-compose
+    - docker-compose-stop
+    - docker-compose-rebuild-images
+
+- name: "docker-compose > rm"
+  command: "echo y | docker-compose -f {{ docker_compose_file }} rm"
+  args:
+    chdir: "{{ docker_compose_dest }}"
+  when: docker_compose_rebuild_images
+  tags:
+    - docker-compose
+    - docker-compose-rm
+    - docker-compose-rebuild-images

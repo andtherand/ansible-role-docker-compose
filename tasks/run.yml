@@ -1,0 +1,8 @@
+---
+- name: "docker-compose > up"
+  command: "docker-compose -f {{ docker_compose_file }} up -d"
+  args:
+    chdir: "{{ docker_compose_dest }}"
+  tags:
+    - docker-compose
+    - docker-compose-up

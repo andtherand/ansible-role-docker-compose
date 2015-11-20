@@ -1,0 +1,5 @@
+---
+# defaults file for docker_compose
+
+docker_compose_rebuild_images: no
+docker_compose_file: docker-compose.yml
