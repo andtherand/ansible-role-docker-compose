@@ -11,23 +11,23 @@ You need to have docker and docker-compose (I guess docker.py) installed.
 
 The following variables are available:
 
-```
+```yaml
 docker_compose_src_template: /path/to/docker-compose_my_template.yml.j2
 ```
 It sets the path to a docker-compose template file. The path can be anywhere, and is not bound to the relative location of the role.
 Due to the nature, this variable has no default value and has to be set.
 
-```
+```yaml
 docker_compose_dest: /my/remote/destination/path
 ```
 Sets the destination path on the machine that's provisioned. Also this variable has no default value because it depends on your specifics.
 
-```
+```yaml
 docker_compose_file: my-docker-compose.yml # default: docker-compose
 ```
 The docker-compose file to be used by ```docker-compose -f {{ docker_compose_file }} [up | stop | rm]```
 
-```
+```yaml
 docker_compose_rebuild_images: no # default: no
 ```
 Force stop container and removal.
